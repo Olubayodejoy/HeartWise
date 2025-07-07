@@ -11,7 +11,7 @@ st.set_page_config(page_title="Heart Disease Risk Checker", layout="centered")
 
 st.markdown("""
     <style>
-        /* 🟡 Set overall background and text color */
+        /* Global background and text color */
         .stApp {
             background-color: #FFF9C4;
             color: #000000 !important;
@@ -22,44 +22,58 @@ st.markdown("""
             color: #000000 !important;
         }
 
+        /* Make all text black */
         h1, h2, h3, h4, h5, h6, p, span, div {
             color: #000000 !important;
         }
 
-        /* ✅ Fix input fields & dropdowns */
+        /* Fix input + text areas */
         input, textarea, select {
             background-color: #ffffff !important;
             color: #000000 !important;
         }
 
-        /* ✅ Fix Streamlit widgets specifically */
-        .stTextInput > div > div > input,
-        .stNumberInput > div > div > input,
-        .stSelectbox > div,
+        /* Specific Streamlit widget fixes */
+        .stTextInput input,
+        .stNumberInput input,
+        .stTextArea textarea,
+        .stSelectbox > div > div,
         .stSelectbox div[data-baseweb="select"],
-        .stRadio > div,
-        .stTextArea > div > textarea,
-        .stSlider > div,
-        .stMultiSelect > div,
+        .stRadio,
+        .stMultiSelect,
+        .stSlider,
         .stButton > button {
             background-color: #ffffff !important;
             color: #000000 !important;
-            border-radius: 5px;
         }
 
-        /* ✅ Remove weird dark highlight */
-        .stSelectbox div[data-baseweb="select"] > div {
+        /* Force white on selected dropdown box */
+        div[data-baseweb="select"] > div {
             background-color: #ffffff !important;
+            color: #000000 !important;
         }
 
-        /* ✅ Fix select options on click */
+        /* Force white on dropdown list */
         div[role="listbox"] {
             background-color: #ffffff !important;
             color: #000000 !important;
         }
 
+        /* Options inside dropdown */
+        div[role="option"] {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        /* Hover effect on options */
+        div[role="option"]:hover {
+            background-color: #f0f0f0 !important;
+            color: #000000 !important;
+        }
+
     </style>
 """, unsafe_allow_html=True)
+
 
 
 
