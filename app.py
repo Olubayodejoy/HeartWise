@@ -11,68 +11,49 @@ st.set_page_config(page_title="Heart Disease Risk Checker", layout="centered")
 
 st.markdown("""
     <style>
-        /* Global background and text color */
         .stApp {
             background-color: #FFF9C4;
-            color: #000000 !important;
+            color: black;
         }
 
-        html, body, [class*="css"] {
-            background-color: #FFF9C4 !important;
-            color: #000000 !important;
-        }
-
-        /* Make all text black */
-        h1, h2, h3, h4, h5, h6, p, span, div {
-            color: #000000 !important;
-        }
-
-        /* Fix input + text areas */
-        input, textarea, select {
+        /* Force white background and black text for dropdowns */
+        div[data-baseweb="select"] {
             background-color: #ffffff !important;
             color: #000000 !important;
         }
 
-        /* Specific Streamlit widget fixes */
-        .stTextInput input,
-        .stNumberInput input,
-        .stTextArea textarea,
-        .stSelectbox > div > div,
-        .stSelectbox div[data-baseweb="select"],
-        .stRadio,
-        .stMultiSelect,
-        .stSlider,
-        .stButton > button {
-            background-color: #ffffff !important;
+        div[data-baseweb="select"] * {
             color: #000000 !important;
+            background-color: #ffffff !important;
         }
 
-        /* Force white on selected dropdown box */
-        div[data-baseweb="select"] > div {
-            background-color: #ffffff !important;
-            color: #000000 !important;
-        }
-
-        /* Force white on dropdown list */
         div[role="listbox"] {
             background-color: #ffffff !important;
-            color: #000000 !important;
         }
 
-        /* Options inside dropdown */
         div[role="option"] {
             background-color: #ffffff !important;
             color: #000000 !important;
         }
 
-        /* Hover effect on options */
         div[role="option"]:hover {
-            background-color: #f0f0f0 !important;
+            background-color: #eaeaea !important;
             color: #000000 !important;
         }
 
+        /* Input boxes */
+        input, textarea {
+            background-color: white !important;
+            color: black !important;
+        }
+
+        /* Fix button colors */
+        button {
+            color: black !important;
+        }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 
