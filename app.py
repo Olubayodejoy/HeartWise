@@ -22,7 +22,7 @@ st.markdown(
 )
 
 
-st.title("💓 Welcome to Heart Disease Risk Checker")
+st.title("💓 Welcome to HeartWise: Your Heart Health Predictor")
 
 # Session state to manage page navigation
 if "page" not in st.session_state:
