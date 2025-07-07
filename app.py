@@ -9,17 +9,25 @@ risk_model = joblib.load("heart_risk_model.pkl")
 # App setup
 st.set_page_config(page_title="Heart Disease Risk Checker", layout="centered")
 
-# Set light gray background
-st.markdown(
-    """
+# Set background to #FFF9C4 and text color to black
+st.markdown("""
     <style>
-    .stApp {
-        background-color: #fff9c4;
-    }
+        .stApp {
+            background-color: #FFF9C4;
+            color: #000000 !important;
+        }
+
+        html, body, [class*="css"] {
+            color: #000000 !important;
+            background-color: #FFF9C4 !important;
+        }
+
+        h1, h2, h3, h4, h5, h6, p, span, div {
+            color: #000000 !important;
+        }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
+
 
 
 st.title("💓 Welcome to HeartWise: Your Heart Health Predictor")
