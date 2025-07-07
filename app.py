@@ -16,7 +16,6 @@ st.markdown("""
             color: black;
         }
 
-        /* Force white background and black text for dropdowns */
         div[data-baseweb="select"] {
             background-color: #ffffff !important;
             color: #000000 !important;
@@ -41,21 +40,25 @@ st.markdown("""
             color: #000000 !important;
         }
 
-        /* Input boxes */
         input, textarea {
             background-color: white !important;
             color: black !important;
         }
 
-        /* Fix button colors */
-        button {
-            color: black !important;
+        /* Fix all Streamlit buttons */
+        button[kind="primary"] {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border: 1px solid #999999 !important;
+            border-radius: 5px !important;
+        }
+
+        button[kind="primary"]:hover {
+            background-color: #f0f0f0 !important;
+            color: #000000 !important;
         }
     </style>
 """, unsafe_allow_html=True)
-
-
-
 
 
 
