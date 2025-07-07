@@ -9,9 +9,9 @@ risk_model = joblib.load("heart_risk_model.pkl")
 # App setup
 st.set_page_config(page_title="Heart Disease Risk Checker", layout="centered")
 
-# Set background to #FFF9C4 and text color to black
 st.markdown("""
     <style>
+        /* Page background and default text */
         .stApp {
             background-color: #FFF9C4;
             color: #000000 !important;
@@ -24,6 +24,24 @@ st.markdown("""
 
         h1, h2, h3, h4, h5, h6, p, span, div {
             color: #000000 !important;
+        }
+
+        /* Input fields, select boxes, sliders, etc. */
+        .stTextInput > div > div > input,
+        .stSelectbox > div > div,
+        .stNumberInput > div > div > input,
+        .stSlider > div,
+        .stButton > button,
+        .stRadio > div,
+        .stTextArea > div > textarea {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        /* Column/box backgrounds */
+        .block-container,
+        .css-1v0mbdj, .css-12w0qpk {
+            background-color: #FFF9C4 !important;
         }
     </style>
 """, unsafe_allow_html=True)
