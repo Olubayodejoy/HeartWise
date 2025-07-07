@@ -11,40 +11,56 @@ st.set_page_config(page_title="Heart Disease Risk Checker", layout="centered")
 
 st.markdown("""
     <style>
-        /* Page background and default text */
+        /* 🟡 Set overall background and text color */
         .stApp {
             background-color: #FFF9C4;
             color: #000000 !important;
         }
 
         html, body, [class*="css"] {
-            color: #000000 !important;
             background-color: #FFF9C4 !important;
+            color: #000000 !important;
         }
 
         h1, h2, h3, h4, h5, h6, p, span, div {
             color: #000000 !important;
         }
 
-        /* Input fields, select boxes, sliders, etc. */
-        .stTextInput > div > div > input,
-        .stSelectbox > div > div,
-        .stNumberInput > div > div > input,
-        .stSlider > div,
-        .stButton > button,
-        .stRadio > div,
-        .stTextArea > div > textarea {
+        /* ✅ Fix input fields & dropdowns */
+        input, textarea, select {
             background-color: #ffffff !important;
             color: #000000 !important;
         }
 
-        /* Column/box backgrounds */
-        .block-container,
-        .css-1v0mbdj, .css-12w0qpk {
-            background-color: #FFF9C4 !important;
+        /* ✅ Fix Streamlit widgets specifically */
+        .stTextInput > div > div > input,
+        .stNumberInput > div > div > input,
+        .stSelectbox > div,
+        .stSelectbox div[data-baseweb="select"],
+        .stRadio > div,
+        .stTextArea > div > textarea,
+        .stSlider > div,
+        .stMultiSelect > div,
+        .stButton > button {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border-radius: 5px;
         }
+
+        /* ✅ Remove weird dark highlight */
+        .stSelectbox div[data-baseweb="select"] > div {
+            background-color: #ffffff !important;
+        }
+
+        /* ✅ Fix select options on click */
+        div[role="listbox"] {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
     </style>
 """, unsafe_allow_html=True)
+
 
 
 
