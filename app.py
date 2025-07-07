@@ -11,12 +11,14 @@ st.set_page_config(page_title="Heart Disease Risk Checker", layout="centered")
 
 st.markdown("""
     <style>
+        /* App background */
         .stApp {
             background-color: #FFF9C4;
             color: black;
         }
 
-        div[data-baseweb="select"] {
+        /* Dropdown fixes */
+        div[data-baseweb="select"], div[role="listbox"], div[role="option"] {
             background-color: #ffffff !important;
             color: #000000 !important;
         }
@@ -26,35 +28,31 @@ st.markdown("""
             background-color: #ffffff !important;
         }
 
-        div[role="listbox"] {
-            background-color: #ffffff !important;
-        }
-
-        div[role="option"] {
-            background-color: #ffffff !important;
-            color: #000000 !important;
-        }
-
         div[role="option"]:hover {
-            background-color: #eaeaea !important;
+            background-color: #f0f0f0 !important;
+        }
+
+        /* Input boxes */
+        input, textarea {
+            background-color: #ffffff !important;
             color: #000000 !important;
         }
 
-        input, textarea {
-            background-color: white !important;
-            color: black !important;
-        }
-
-        /* Fix all Streamlit buttons */
-        button[kind="primary"] {
+        /* BUTTONS - All buttons everywhere */
+        button {
             background-color: #ffffff !important;
             color: #000000 !important;
             border: 1px solid #999999 !important;
-            border-radius: 5px !important;
+            border-radius: 6px !important;
         }
 
-        button[kind="primary"]:hover {
-            background-color: #f0f0f0 !important;
+        button:hover {
+            background-color: #f4f4f4 !important;
+            color: #000000 !important;
+        }
+
+        /* Label text (just in case it's dark on mobile) */
+        label {
             color: #000000 !important;
         }
     </style>
